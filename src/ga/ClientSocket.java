@@ -29,7 +29,7 @@ public class ClientSocket implements Runnable {
         } catch (Exception e) {
             System.out.println("Can't create connection");
         }
-        while (true) {
+        while (!MySocket.isClosed()) {
             String c = " ";
             
             int n = 0;
@@ -67,6 +67,7 @@ public class ClientSocket implements Runnable {
     public static void disconnectClient() {
         try {
             System.out.println("Disconnecting...");
+            out.println("d");
             out.close();
             in.close();
             MySocket.close();
