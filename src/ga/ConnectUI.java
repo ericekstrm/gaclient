@@ -35,7 +35,7 @@ public class ConnectUI {
 
             @Override
             public void actionPerformed(ActionEvent ae) {
-                String ip = "148.136.200.190";
+                String ip = "localhost";
                 int port = 25565;
                 if (ConnectUI.textFieldIP.getText().length() != 0) {
                     ip = ConnectUI.textFieldIP.getText();
